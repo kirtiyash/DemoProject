@@ -1,0 +1,66 @@
+<html>
+<head><title>HTML FORM</title>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width,initial-scale=1">
+     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    
+    <style>
+        #errorBox{
+            color:#F00;
+          }
+        #invalid_email{color:#F00;}
+     </style>
+</head> 
+<body>
+    <div id="errorBox"></div><div class="container">
+    <form id="userForm">
+    <table class="table table-striped" id="current">
+      <tr>
+         <td>Name:</td>
+         <td><input type="text" id="name"></td>
+      </tr>
+     <tr>
+        <td>Age:</td>
+        <td><input type="text" id="age"></td>
+     </tr>
+     <tr>
+        <td>Gender:</td>
+        <td><input type="radio" name="gender" value="male" id="gender" > Male
+        <input type="radio" name="gender" value="female" id="gender2">Female</td>
+     </tr>
+    <tr>
+        <td>Addrsess:</td>
+        <td><textarea rows=2 cols=30 id="address"></textarea></td>
+    </tr>
+    <tr>
+        <td>E-mail:</td>
+        <td><input type="email" name="email" id="email"><input type="button" id="add" value="Add">
+        <input type="button" id ="update" value="update" onclick="editRow()"></td>
+    </tr>
+    </table>
+    
+    </form>
+    </div><br><br>
+    <div id="mydata">
+        <b>Current data in the system ...</b>
+        <table id="table"  border="1" cellpadding="2" width="50%" class="table table-hover">
+          <tr>
+            <td><b>RecordId</b></td>
+            <td><b>Name</b></td>
+            <td><b>Age</b></td>
+            <td><b>Gender</b></td>
+            <td><b>address</b></td>
+            <td><b>email</b></td>
+          </tr>
+       </table>
+            &nbsp;<br/>
+    </div>
+
+<script src="jquery-1.12.4.min.js"></script>
+<script src="kJquery.js"></script>
+
+
+</body>
+</html> 
