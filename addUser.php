@@ -14,16 +14,21 @@ $fm = new FileMaker('kirti.fmp12', '172.16.8.138', 'Admin', 'mindfire');
         $gender1 = $_POST['php_gender'];
         $email1 = $_POST['php_email'];
         $address1= $_POST['php_address'];
+        $usr_type= $_POST['usertype'];
+        
         $record = $fm->createRecord('Web_Layout');
         $record->setField('name',$name1);
         $record->setField('age', $age1);
         $record->setField('gender', $gender1);
         $record->setField('address', $address1);
         $record->setField('email', $email1);
+        $record->setField('user_type', $usr_type);
+        
         $result = $record->commit();
         $request = $fm->newFindAllCommand('Web_Layout');
         $result = $request->execute();
         $records = $result->getRecords();
+        
         $users = [];
         $i = 0;
         foreach ($records as $record) {

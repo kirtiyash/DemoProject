@@ -31,8 +31,8 @@ $fm = new FileMaker('kirti.fmp12', '172.16.8.138', 'Admin', 'mindfire');
         $users[$i]['recordId'] = $record->getRecordId();
         $users[$i]['name'] = $record->getField('name');
         $users[$i]['age'] = $record->getField('age');
-        $users[$i]['email'] = $record->getField('email');
         $users[$i]['gender'] = $record->getField('gender');
+        $users[$i]['email'] = $record->getField('email');
         $users[$i]['address'] = $record->getField('address');
         $i++;
     }

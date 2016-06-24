@@ -1,4 +1,11 @@
+
 <?php
+/**
+* deleting records from filemaker
+* Created By: Kirti
+* Date: 17/06/2016
+* modified:23/06/2016
+**/ 
 
 require_once ('library/filemakerlib/Filemaker.php');
 $fm = new FileMaker('kirti.fmp12', '172.16.8.138', 'Admin', 'mindfire');
